@@ -20,7 +20,7 @@
             </thead>
             <tbody>
                 <?php
-                    for ($i = 0; $i < $_POST['room_count']; ++$i) {
+                    for ($i = 0; $i < $_POST['room-count']; ++$i) {
                         $id = $i + 1;
                         include 'formField.php';
                     }

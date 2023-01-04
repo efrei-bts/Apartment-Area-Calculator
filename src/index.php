@@ -1,8 +1,8 @@
 <?php
 if (!array_key_exists('room-largeur', $_POST) || !array_key_exists('room-longueur', $_POST)
 || count($_POST['room-largeur']) != count($_POST['room-longueur'])) {
-    if (array_key_exists('room_count', $_POST)) {
-        $_POST['room_count'] = intval($_POST['room_count']);
+    if (array_key_exists('room-count', $_POST)) {
+        $_POST['room-count'] = intval($_POST['room-count']);
         include 'formPieces.php';
     } else
         include 'form.php';

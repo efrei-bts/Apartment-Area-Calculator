@@ -10,8 +10,8 @@
 <body>
     <h1 style="color: red">Société Immobilière de Gestion.</h1>
     <form action="/" method="post">
-        <label for="room_count">Nombre de pièces:</label>
-        <input type="number" min="1" id="room_count" name="room_count">
+        <label for="room-count">Nombre de pièces:</label>
+        <input type="number" min="1" id="room-count" name="room-count">
         <input type="submit" value="Generer le formulaire de saisie">
     </form>
 </body>
