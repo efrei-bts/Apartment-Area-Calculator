@@ -1,6 +1,6 @@
 # Exercice du 4/01/2022
 
-Génération d'un formulaire qui contient la longueur et largeur de chaque pièce et qui donne la surface totale d'un appartement.
+Génération d'un formulaire qui contient la longueur et largeur de chaque salle et qui donne la surface totale d'un appartement.
 
 ### Files:
 |   **File**    |                                                                                              **Description**                                                                                              |
