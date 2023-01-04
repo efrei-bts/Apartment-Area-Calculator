@@ -1,4 +1,28 @@
 <?php
+/**
+ * Cette première partie permet de vérifier à quelle étape nous sommes:
+ * - Demander le nombre de salles.
+ * - Remplir le formulaire.
+ * - Afficher le résultat.
+ */
+
+/**
+ * Dans cette première condition pour vérifier à quelle étape nous sommes en regardant dans le tableau contenant
+ * les valeurs de post si les valeurs d'une étape sont présentes avec en priorité le résultat, le formulaire des surfaces puis le formulaire du nombre de salles:
+ *
+ * Si les champs "room-largeur' et "room-longueur" sont présents alors c'est que le formulaire des surfaces a renvoyé ses valeurs
+ * alors je dois donc afficher le résultat.
+ *
+ * Si le champ "room-count' est présent alors c'est que le formulaire du nombre de salles a renvoyé sa valeur
+ * alors je dois donc générer et afficher le formulaire des surfaces.
+ *
+ * Si aucune des 2 conditions précédentes n'est valide, alors j'affiche le formulaire du nombre de pièces.
+ *
+ *
+ *
+ * Bonus: Pour éviter tout problème dans ma prémère condition je vérifie que les 2 champs contiennent bien le même nombre de valeurs
+ *        sinon je reviens au formulaire du nombre de salles.
+ */
 if (!array_key_exists('room-largeur', $_POST) || !array_key_exists('room-longueur', $_POST)
 || count($_POST['room-largeur']) != count($_POST['room-longueur'])) {
     if (array_key_exists('room-count', $_POST)) {
