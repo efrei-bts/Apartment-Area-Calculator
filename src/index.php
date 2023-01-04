@@ -32,12 +32,18 @@ if (!array_key_exists('room-largeur', $_POST) || !array_key_exists('room-longueu
         include 'form.php';
     exit(0);
 }
-$nbRoom = count($_POST['room-longueur']);
-$largeurs = $_POST['room-largeur'];
-$longueurs = $_POST['room-longueur'];
-$total = 0;
-for ($i = 0; $i < $nbRoom; ++$i)
-    $total += intval($largeurs[$i]) * intval($longueurs[$i]);
+
+function apartmentArea(array $largeurs, array $longueurs) {
+    $nbRoom = count($largeurs);
+
+    if ($nbRoom != count($longueurs))
+        return -1;
+    $total = 0;
+    for ($i = 0; $i < $nbRoom; ++$i)
+        $total += intval($largeurs[$i]) * intval($longueurs[$i]);
+    return $total;
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -50,6 +56,6 @@ for ($i = 0; $i < $nbRoom; ++$i)
 </head>
 <body>
     <h1 style="color: red">Société Immobilière de Gestion.</h1>
-    <a>Les pièces de l'appartement ont une surface totale de <strong><?php echo "$total m²"?></strong></a>
+    <a>Les pièces de l'appartement ont une surface totale de <strong><?php echo apartmentArea($_POST['room-largeur'], $_POST['room-longueur']) . " m²"?></strong></a>
 </body>
 </html>
