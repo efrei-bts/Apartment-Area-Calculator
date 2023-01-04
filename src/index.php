@@ -27,7 +27,7 @@ if (!array_key_exists('room-largeur', $_POST) || !array_key_exists('room-longueu
 || count($_POST['room-largeur']) != count($_POST['room-longueur'])) {
     if (array_key_exists('room-count', $_POST)) {
         $_POST['room-count'] = intval($_POST['room-count']);
-        include 'formPieces.php';
+        include 'formRooms.php';
     } else
         include 'form.php';
     exit(0);
