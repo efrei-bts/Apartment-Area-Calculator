@@ -23,7 +23,7 @@
  * Bonus: Pour éviter tout problème dans ma prémère condition je vérifie que les 2 champs contiennent bien le même nombre de valeurs
  *        sinon je reviens au formulaire du nombre de salles.
  */
-if (!array_key_exists('room-largeur', $_POST) || !array_key_exists('room-longueur', $_POST)
+if (!isset($_POST['room-largeur']) || !isset($_POST['room-longueur'])
 || count($_POST['room-largeur']) != count($_POST['room-longueur'])) {
     if (array_key_exists('room-count', $_POST)) {
         $_POST['room-count'] = intval($_POST['room-count']);
